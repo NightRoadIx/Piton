@@ -59,6 +59,7 @@ print("Un valor entero {:4}, un valor flotante {:4.3}".format(enteros, flotante)
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Operaciones
 '''
+ARTIMÉTICAS
  +		suma
  -		resta
  *		multiplicación
@@ -67,6 +68,7 @@ print("Un valor entero {:4}, un valor flotante {:4.3}".format(enteros, flotante)
  **		exponente
  //		división floor
  
+ NIVEL DE BITS
  &		AND
  |		OR
  ~		NOT
@@ -74,8 +76,30 @@ print("Un valor entero {:4}, un valor flotante {:4.3}".format(enteros, flotante)
  >>		Desplazamiento bits a la derecha
  <<		Desplazamiento bits a la izquierda
  
+ LÓGICAS
  and	y
  or		o
  not	no 
  
 '''
+
+# Las divisiones en Python son de dos tipos:
+# Divisiones decimales ("normales")}
+print(9 / 6)
+# O divisiones enteras, en donde solo se obtiene el número entero
+# del cociente
+print(9 // 6)
+# Junto con su módulo o residuo
+print(9 % 6)
+
+# Las operaciones a nivel de bits son las operaciones más rápidas
+# que se pueden efectuar en la ALU
+# Permiten realizar operaciones lógicas a nivel de bits
+# Suponiendo 9 = 1001
+# 			12 = 1100
+# Operación and
+print(9 & 12)	# = 8  = 1000
+print(9 | 12)	# = 13 = 1101
+print(9 ^ 12)	# = 5  = 0101
+print(9 >> 2)	# desplazando 2 bits, queda 00000011 = 3
+print(9 << 2)	# desplazando 2 bits, queda 00110000 = 48
