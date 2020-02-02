@@ -1,12 +1,12 @@
 '''
-	Colecciones de datos en Python (Arreglos)
+	Colecciones de datos en Python (Listas)
 	
 	Existe cuatro tipos de datos en Python:
 	Listas, Tuplas, Sets y Diccionarios
 '''
 
 # LISTAS
-# Una lista es una colección de datos ordenada y cambiable
+# Una lista es una colección de datos ordenada y modificable
 # Se declaran de la siguiente forma:
 miLista = ["manzana", "banana", "cereza"]
 miListaNumeros = [1, 9, 4, 2, 5, 8]
