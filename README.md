@@ -8,3 +8,4 @@ init03.py   -   Colecciones de datos (Tuplas)
 inin04.py   -   Colecciones de datos (Sets)  
 inin05.py   -   Colecciones de datos (Diccionarios)  
 inin06.py   -   Funciones en Python  
+inin07.py   -   Cadenas de caracteres  
