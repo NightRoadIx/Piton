@@ -9,4 +9,6 @@ inin04.py   -   Colecciones de datos (Sets)
 inin05.py   -   Colecciones de datos (Diccionarios)  
 inin06.py   -   Funciones en Python  
 inin07.py   -   Cadenas de caracteres  
-inin08.py   -   Manejo de excepciones
+inin08.py   -   Manejo de excepciones  
+inin09.py   -   Manejo de matrices
+inin10.py   -   Programacón orientada a objetos en Python
