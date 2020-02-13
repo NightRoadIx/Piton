@@ -1,47 +1,54 @@
 '''
-	Programación orientada a objetos en Python
+	Manejo de módulos
+	Módulo de fechas datetime
 '''
-# Creación de una clase
-class MyClass:
-    x = 5
+# Se debe de incluir la librería datetime
+# Para importar librerias se utiliza la siguiente sintaxis
+#
+# import modulo
+#
+# Y para utilizar métodos o constantes se utilizan como:
+#
+# modulo.metodo()
+#
+# Sin embargo, se puede renombrar como:
+#
+# import modulo as md
+#
+# Y entonces para usar ya sea los métodos o constantes:
+#
+# md.metodo()
 
-# Crear un objeto (instanciar)
-p1 = MyClass()
-# Imprimir el valor del argumento
-print(p1.x)
+# Importar un módulo y renombrarlo
+import datetime as dt
 
+# Obtener la fecha
+x = dt.datetime.now()
+print(x)
 
+# Mostrar solamente el año
+print(x.year)
+
+# Método strftime()
+# Mostrar el día de la semana
+print(x.strftime("%A"))
+# Mostrar el nombre del mes
+print(x.strftime("%B"))
 '''
-Sin embargo este uso simple de objetos no tienes validez en la vida real
-por lo que se introduce un nuevo tipo de método, __init__()
-el cual es siempre ejecutado cuando la clase se instancia
-
-El método __init__() se utiliza para asignar valores a las propiedades del objeto
-|u otras operaciones que son necesarias cuando el objeto es creado
+	%b		Nombre del mes, versión corta
+	%m		Número de mes [1,12]
+	%d		Día de la semana
+	%Y		Número de año
+	%H		Hora [0,23]
+	%h		hora [0,12]
+	%p		PM/AM
+	%M		Minuto
+	%S		Segundo
+	%f		microsegundo
+	Entre otros...
 '''
 
-class Persona:
-    def __init__(self, nombre, edad):
-        # self indica que es el propio objeto
-        # cuyos atributos de nombre y edad se asignan a lo que se envía como parámetros
-        self.nombre = nombre
-        self.edad = edad
-        
-        # Se incluye un método
-    def miFuncion(self):
-        # Se recibe "self" el cual indica al mismo objeto
-        # y es utilizado para ingresar a las variables que pertenecen a la clase
-        print("Hola mi nombre es " + self.nombre + " y tengo " + str(self.edad) + " años")
-
-# Se instancia el objeto con valores iniciales
-p1 = Persona("Juan Nepomuceno", 36)
-
-print(p1.nombre)
-print(p1.edad)
-
-p1.miFuncion()
-
-
-# Se pueden hacer modificaciones en las propiedades/atributos del objeto
-p1.edad = 40
-p1.miFuncion()
+# Crear un elemento del tipo fecha
+y = dt.datetime(2020, 5, 17)
+print(y)
+# Se puede crear el elemento tipo fecha con todos los datos
