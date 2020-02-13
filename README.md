@@ -1,7 +1,7 @@
 # Piton
 Programas ejemplo para Python  
 
-inin00.py   -   Inicio de lenguaje de programación Python
+inin00.py   -   Inicio de lenguaje de programación Python  
 inin01.py   -   Manejo de estructuras de Control, decision if-elif-else, ciclos while, for, e instrucciones de saltos continue, break  
 inin02.py   -   Colecciones de datos (Listas)  
 init03.py   -   Colecciones de datos (Tuplas)  
