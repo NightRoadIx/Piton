@@ -151,7 +151,7 @@ d = squareform(pdist(x, 'euclidean'))
 print(d)
 
 
-# Graficación
+# # # # # # GRAFICACIÓN 
 # Generar las coordenadas (x,y) para los puntos
 x = np.arange(0, 3 * np.pi, 0.1)
 # del seno()
@@ -200,4 +200,112 @@ plt.title('Coseno')
 
 # Mostrar la figura
 plt.show()
+
+
+# Gráficas de barras
+# generar una figura del matplotlib
+fig = plt.figure()
+# Y se crean los ejes en donde se van a colocar
+ax = fig.add_axes([0,0,1,1])
+# Los valores que se colocarán en el eje x
+leng = ['C', 'C++', 'C#', 'Python', 'Rust']
+# Los valores del eje y
+estudiando = [23, 17, 35, 29, 12]
+# Generar la gráfica de barras
+ax.bar(leng, estudiando)
+plt.show()
+
+# Gráfica de pastel
+# generar una figura del matplotlib
+fig = plt.figure()
+# Y se crean los ejes en donde se van a colocar
+ax = fig.add_axes([0,0,1,1])
+# ejes iguales
+ax.axis('equal')
+# Los valores que se colocarán en el eje x
+leng = ['C', 'C++', 'C#', 'Python', 'Rust']
+# Los valores del eje y
+estudiando = [23, 17, 35, 29, 12]
+# Crear la gráfica
+ax.pie(estudiando, labels = leng, autopct='%1.2f%%')
+plt.show()
+
+# Generar histogramas
+# Se generarán datos con una distibución del tipo gaussiano
+mu, sigma = 100, 15
+# Crear un arreglo numpy con la distribución gaussiana, generando 10,000 números aleatorios
+x = mu + sigma * np.random.rand(10000)
+
+# Se genera en tonces los datos para el histograma
+# hist
+# Recibe: arreglo numpy con los datos, cantidad de barras a generar, densidad para normalizar el histograma, color, transparencia de color
+# Regresa: arreglo o lista de arreglos con los valores de cada barra, el borde de las barras, lista de parches individuales usados para crear el histograma
+n, bins, patches = plt.hist(x, 50, density = True, facecolor = 'g', alpha = 0.75)
+
+# Arreglar el histograma
+plt.xlabel('Valores')
+plt.ylabel('Probabilidad')
+plt.title('Histograma')
+plt.text(60, .025, r'$\mu=100,\ \sigma=15$')
+plt.xlim(40, 160)
+plt.ylim(0, 0.03)
+plt.grid(True)
+plt.show()
+
+# Mapas de vectores
+# quiver(x, y, u, v)
+# coordenadas x, coordenadas y, magnitud en x de los vectores, magnitud en y de los vectores
+# se generan los puntos en (x, y) como una especie de rejilla que va de [-2, 2] con pasos de 0.2
+x,y = np.meshgrid(np.arange(-2, 2, .2), np.arange(-2, 2, .25))
+# Esta es la función vectorial z = x e^(x^2 - y^2)
+z = x*np.exp(-x**2 - y**2)
+# esto regresa el gradiente de un arreglo N-dimensional
+v, u = np.gradient(z, .2, .2)
+# Esto genera la figura y los ejes
+fig, ax = plt.subplots()
+q = ax.quiver(x,y,u,v)
+plt.grid()
+plt.show()
+
+
+# GRAFICACIÓN EN 3D
+# Debe importarse el siguiente toolkit
+from mpl_toolkits import mplot3d
+# Crear la figura
+fig = plt.figure()
+# Crear los ejes, con proyección 3D
+ax = plt.axes(projection='3d')
+# Se genera un arreglo numpy que va de 0 a 100 con pasos de 1
+z = np.linspace(0, 1, 100)
+# la ecuación paramétrica es:
+#  x = z * sin(20z)
+x = z * np.sin(20 * z)
+# y = z * cos(20z)
+y = z * np.cos(20 * z)
+ax.plot3D(x, y, z, 'gray')
+ax.set_title('Gráfica 3D lineal')
+plt.show()
+
+# Gráfica de superficie 3D
+# Se genera el producto exterior de 2 vectores
+x = np.outer(np.linspace(-2, 2, 30), np.ones(30))
+# Obtener la transpuesta de x
+# Esto generará una especie de rejilla en 2D (x,y)
+y = x.copy().T
+# y se halla la función z(x,y)
+z = np.cos(x ** 2 + y ** 2) + np.sin(x ** 2 + y ** 2)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+ax.plot_surface(x, y, z,cmap='viridis', edgecolor='none')
+ax.set_title('Gráfica de superficie')
+plt.show()
+
+
+
+
+
+
+
 
