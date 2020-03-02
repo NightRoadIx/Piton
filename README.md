@@ -18,5 +18,6 @@ inin13.py   -   Funciones lmabda (los verdaderos poderes mágico-misteriosos de 
 inin14.py   -   Programación orientada a objetos en Python (Básico)  
 inin15.py   -   Programación orientada a objetos en Python (Herencia)  
 inin16.py   -   Programación orientada a objetos en Python (Encapsulamiento)  
-inin17.py   -   Librerías numpy y matplotlib para el manjeo de arreglos y grafiación  
+inin17.py   -   Librerías numpy y matplotlib para el manjeo de arreglos y graficación  
 inin18.py   -   Librería sympy para el manejo de matemáticas simbólicas  
+inin19.py   -   Librería matplotlib.animation para generación de gráficas animadas  
