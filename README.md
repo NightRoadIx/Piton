@@ -21,3 +21,4 @@ inin16.py   -   Programación orientada a objetos en Python (Encapsulamiento)
 inin17.py   -   Librerías numpy y matplotlib para el manjeo de arreglos y graficación  
 inin18.py   -   Librería sympy para el manejo de matemáticas simbólicas  
 inin19.py   -   Librería matplotlib.animation para generación de gráficas animadas  
+inin20.py   -   Librería gTTS para producción de audio a partir de texto  
