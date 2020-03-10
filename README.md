@@ -22,3 +22,7 @@ inin17.py   -   Librerías numpy y matplotlib para el manjeo de arreglos y grafi
 inin18.py   -   Librería sympy para el manejo de matemáticas simbólicas  
 inin19.py   -   Librería matplotlib.animation para generación de gráficas animadas  
 inin20.py   -   Librería gTTS para producción de audio a partir de texto  
+inin21.py   -   Programa que muestra el procesamiento de señales utilizando Python  
+inin22.py   -   Webscrapping, para el tratamiento de grandes cantidades de información  
+inin23.py   -   Librería PyPDF2 para el manejo de archivos PDF  
+inin24.py   -   Librería pyautoGUI para el manejo de eventos de ratón, teclado y mensajes de Windows    
