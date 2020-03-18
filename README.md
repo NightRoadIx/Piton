@@ -25,4 +25,9 @@ inin20.py   -   Librería gTTS para producción de audio a partir de texto
 inin21.py   -   Programa que muestra el procesamiento de señales utilizando Python  
 inin22.py   -   Webscrapping, para el tratamiento de grandes cantidades de información  
 inin23.py   -   Librería PyPDF2 para el manejo de archivos PDF  
-inin24.py   -   Librería pyautoGUI para el manejo de eventos de ratón, teclado y mensajes de Windows    
+inin24.py   -   Librería pyautoGUI para el manejo de eventos de ratón, teclado y mensajes de Windows  
+inin25.py   -   Librería URLLIB para descarga de archivos dessde internet  
+inin26.py   -   Keylogger, un programa para espiar todo lo que se presione en el teclado  
+inin27.py   -   Librería pytube para descarga de videos desde YouTube  
+inin28.py   -   Librería OpenCV para el tratamiento de imágenes (1) el uso de las capas de color BGR  
+inin29.py   -   Librería OpenCV para el tratamiento de imágenes (2) apertura de una imagen  
