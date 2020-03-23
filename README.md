@@ -31,3 +31,5 @@ inin26.py   -   Keylogger, un programa para espiar todo lo que se presione en el
 inin27.py   -   Librería pytube para descarga de videos desde YouTube  
 inin28.py   -   Librería OpenCV para el tratamiento de imágenes (1) el uso de las capas de color BGR  
 inin29.py   -   Librería OpenCV para el tratamiento de imágenes (2) apertura de una imagen  
+inin30.py   -   Librería request spara pedir información a una página web  
+inin31.py   -   Librería pyqrcode para crear códigos QR   
