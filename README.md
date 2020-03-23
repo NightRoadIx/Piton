@@ -33,3 +33,4 @@ inin28.py   -   Librería OpenCV para el tratamiento de imágenes (1) el uso de 
 inin29.py   -   Librería OpenCV para el tratamiento de imágenes (2) apertura de una imagen  
 inin30.py   -   Librería request spara pedir información a una página web  
 inin31.py   -   Librería pyqrcode para crear códigos QR   
+inin32.py   -   Librería Python Library Image (PIL) y Numpy para generar fractales   
