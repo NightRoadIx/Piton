@@ -35,3 +35,4 @@ inin30.py   -   Librería request spara pedir información a una página web
 inin31.py   -   Librería pyqrcode para crear códigos QR   
 inin32.py   -   Librería Python Library Image (PIL) y Numpy para generar fractales   
 inin33.py   -   List comprehension, una forma elegante de crear listas en Python   
+inin33.py   -   Librería SMTPLIB, SSL, para en envío de correos por Gmail (recordar que se debe de dar permiso a las aplicaciones no seguras en la cuenta de Google)   
