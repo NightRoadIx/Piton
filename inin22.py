@@ -37,6 +37,7 @@ print(soup.prettify() )
 print(soup.findAll('a'))
 
 # No todos las etiquetas nos interesan, pero se puede probar
+# OJO, AQUÍ HAY QUE MODIFICAR EL NÚMERO [36], EL CUAL VA VARIANDO YA QUE LOS DATOS SE ACTUALIZAN DIARIAMENTE
 one_a_tag = soup.findAll('a')[36]
 link = one_a_tag['href']
 
