@@ -37,3 +37,4 @@ inin32.py   -   Librería Python Library Image (PIL) y Numpy para generar fracta
 inin33.py   -   List comprehension, una forma elegante de crear listas en Python   
 inin34.py   -   Librería SMTPLIB, SSL, para en envío de correos por Gmail (recordar que se debe de dar permiso a las aplicaciones no seguras en la cuenta de Google)   
 inin35.py   -   Programa ejemplo con varios conceptos de la Programación Orientada a Objetos   
+inin36.py   -   Programa ejemplo para grafiación con colores SteamPunk   
