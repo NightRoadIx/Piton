@@ -38,3 +38,5 @@ inin33.py   -   List comprehension, una forma elegante de crear listas en Python
 inin34.py   -   Librería SMTPLIB, SSL, para en envío de correos por Gmail (recordar que se debe de dar permiso a las aplicaciones no seguras en la cuenta de Google)   
 inin35.py   -   Programa ejemplo con varios conceptos de la Programación Orientada a Objetos   
 inin36.py   -   Programa ejemplo para grafiación con colores SteamPunk   
+inin37.py   -   Librería Reportlab para generar archivos en PDF a partir de Python    
+inin38.py   -   Programa ejemplo del multiprocesamiento (multithreading)   
