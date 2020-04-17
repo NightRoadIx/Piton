@@ -1,9 +1,13 @@
 '''
     SELENIUM
-    Es una librería para hacer 
+    Es una librería para hacer pruebas en paginas web
     
     pip install selenium
     pip install webdriver-manager
+
+
+    Más información
+    https://selenium-python.readthedocs.io/installation.html
 '''
 # Importar la librería selenium el webdriver
 from selenium import webdriver
