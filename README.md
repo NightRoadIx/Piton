@@ -41,3 +41,4 @@ inin36.py   -   Programa ejemplo para grafiación con colores SteamPunk
 inin37.py   -   Librería Reportlab para generar archivos en PDF a partir de Python    
 inin38.py   -   Programa ejemplo del multiprocesamiento (multithreading)   
 inin39.py   -   Librería Tkinter para generar Interfaces Gráficas de Usuario (GUI) a partir de código   
+inin40.py   -   Librería Selenium para el manejo y pruebas de páginas web   
