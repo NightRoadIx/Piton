@@ -43,4 +43,6 @@ inin38.py   -   Programa ejemplo del multiprocesamiento (multithreading)
 inin39.py   -   Librería Tkinter para generar Interfaces Gráficas de Usuario (GUI) a partir de código   
 inin40.py   -   Librería Selenium para el manejo y pruebas de páginas web   
 inin41.py   -   Librería OpenCV para el tratamiento de imágenes (3) uso de una cámara web   
-inin42.py   -   Programa ejmplo de la complejidad computacional   
+inin42.py   -   Programa ejemplo de la complejidad computacional   
+inin43.py   -   Programa ejemplo del uso de funciones decoradores en Python (básico)    
+inin44.py   -   Programa ejemplo del uso de funciones decoradores en Python (uso y regreso de valores)   
