@@ -1,71 +1,26 @@
 '''
-    Decoradores de funciones
-    Es importante tomar en consideración lo siguiente para entender los 
-    decoradores de funciones:
-        1.- En Python, se puede definir una función dentro de otra
-        2.- En Python, una función puede ser enviada como parámetro a otra
-        función (incluso una función puede regresar otra función)
+    *ARGS, **KWARGS en Python
+    La sintaxis especial *args en la definición de funciones es utilizada para
+    pasar un número variable de argumentos a una función. 
+    Es utilizado para pasar argumentos sin palabras clave (variables),
+    esto es una lista de argumentos variables
+    
+    Esta notación proviene desde C, el cual permitía mandar argumentos
+    variables cuando el programa se ejecuta, aún se puede osbervar esto,
+    por ejemplo cuando se ejecuta la instrucción 'pip' para instalar
+    librerías en Python, ya que el programa se llama pip, pero se ejecuta
+    con los argumentos:
+        pip install ALGO
+    
+    Por tanto, esta es la reminiscencia de los apuntadores
+    *  -> algo similar a un arreglo
+    ** -> algo similar a una arreglo de arreglos (matriz)
 '''
+def miFuncion(*args, **kwargs):
+    print("args: ", args)
+    print("kwargs: ", kwargs)
 
-#%%
-# Por ejemplo, se crea una función con un mensaje de saludo
-# la función recibe una cadena de texto
-def mensaje(cadena):
-    
-    # Ahora se coloca una función al interior
-    def saludar():
-        return "Hola "
-    
-    # Ahora se regresa la concatenaciíon de la función y la cadena
-    # (esto se puede realizar en otros lenguajes, pero llamando a las
-    # funciones que, por supuesto, están definidas fuera de la función)
-    return saludar() + cadena
-
-# Se crea una función con el nombre
-def perso(nombres):
-    return nombres
-
-# Se manda a llamar la función
-print( mensaje(perso("Borola")) )
-
-
-#%%
-# Ahora bien, un decordor es una funciín que toma una función como parámetro
-# y regresa una función. Esto es útil para "envolver" la funcionalidad
-# con el mismo código una y otra vez.
-# Se reescribirá el ejemplo anterior usando decoradores
-
-def mensajeDcorado(fun):
-    
-    # Función anidado
-    def saludar2(nombre):
-        return "Hola " + fun(nombre)
-    
-    # La función regresa una función
-    return saludar2
-
-# Usar la notación @funcion para indicar que la siguiente función uilizará
-    # la funcion especificada como decorador
-@mensajeDcorado
-def perso2(nombres2):
-    return nombres2
-
-# Aquí quiere decir que solo se utilzaá el nombre de la función que está decorada
-# por otra
-print(perso2("Borola"))
-
-'''
-    Como es que trabaja el decorador...
-    1.-Se manda a llamar la función perso2() con un argumento
-    2.-Esta función esta siendo decorada por otra (mensajeDcorado), por lo que
-    se manda a llamar esta última función usando como argumento la función
-    perso2()
-    3.-Una vez dentro de la función hay otra, la cual recibe el argumento
-    de la función perso2() y la propia función para mandarla a llamar
-    y regresar el valor que se mando en un inicio "Borola"
-    4.-Finalmente, la función decoradora regresa su función interna que 
-    no es otra cosa que la concatenación de "Hola " + argumento de la función
-    que originalmente se mando a llamar
-'''
-
-
+# Ahora se pasan los argumentos y sus valores en la función
+# pueden ser de cualquier longitud
+miFuncion("Helden", "David", "Bowie", primer = 666, segundo = "Heroes")
+# ¿Qué regresa esta función?
