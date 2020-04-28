@@ -46,3 +46,5 @@ inin41.py   -   Librería OpenCV para el tratamiento de imágenes (3) uso de una
 inin42.py   -   Programa ejemplo de la complejidad computacional   
 inin43.py   -   Programa ejemplo del uso de funciones decoradores en Python (básico)    
 inin44.py   -   Programa ejemplo del uso de funciones decoradores en Python (uso y regreso de valores)   
+inin45.py   -   Programa ejemplo del uso de funciones decoradores en Python (uso de parámetros)   
+
