@@ -49,4 +49,4 @@ inin44.py   -   Programa ejemplo del uso de funciones decoradores en Python (bá
 inin45.py   -   Programa ejemplo del uso de funciones decoradores en Python (uso y regreso de valores)   
 inin46.py   -   Programa ejemplo del uso de funciones decoradores en Python (uso de parámetros)   
 inin47.py   -   Programa ejemplo del uso de la función help() para mostrar la ayuda de un programa, función o clase   
-
+inin48.py   -   Librería pygame para el desarrollo de juegos en Python (ejemplo con el juego Ping-Pong)     
