@@ -14,7 +14,7 @@ inin09.py   -   Manejo de matrices
 inin10.py   -   Manejo de módulos y módulo de fechas  
 inin11.py   -   Manejo de archivos  
 inin12.py   -   Expresiones regulares (RegEx)  
-inin13.py   -   Funciones lmabda (los verdaderos poderes mágico-misteriosos de Python)  
+inin13.py   -   Funciones lambda (los verdaderos poderes mágico-misteriosos de Python)  
 inin14.py   -   Programación orientada a objetos en Python (Básico)  
 inin15.py   -   Programación orientada a objetos en Python (Herencia)  
 inin16.py   -   Programación orientada a objetos en Python (Encapsulamiento)  
