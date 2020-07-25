@@ -51,3 +51,4 @@ inin46.py   -   Programa ejemplo del uso de funciones decoradores en Python (uso
 inin47.py   -   Programa ejemplo del uso de la función help() para mostrar la ayuda de un programa, función o clase   
 inin48.py   -   Librería pygame para el desarrollo de juegos en Python (ejemplo con el juego Ping-Pong)     
 inin49.py   -   Programa ejemplo para el manejo de una base de datos no-SQL (Firebase)     
+inin50.py   -   Programa ejemplo para el manejo de la librería pandas para la lectura y manejo de archivos CSV (Comma Separated Values)     
