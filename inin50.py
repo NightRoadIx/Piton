@@ -1,7 +1,7 @@
 '''
     Librería pandas para el manejo de grandes cantidades de información
     Esta librería permite realizar análisis de información en archivos CSV
-    principalmente.
+    principalmente (Comma Separated Values).
     
     pip install pandas
     
@@ -13,7 +13,7 @@ import pandas
 
 # Leer los datos de un archivo
 # el parámetro index_col = 0, indica que la columna 0 funcionará como el índice
-df = pandas.read_csv('nba.csv', index_col = 0)
+# df = pandas.read_csv('nba.csv', index_col = 0)
 df = pandas.read_csv('nba.csv')
 
 # Ver algunos de los datos leídos (los primeros y últimos)
@@ -65,3 +65,13 @@ nueva = df[["Name", "Team", "Number", "Position"]]
 
 # Obtener datos específicos de filas
 jazz = df[df["Team"] == "Utah Jazz"]
+
+# # # # # # # #
+# Gradicar datos con Matplotlib
+import matplotlib.pyplot as mp
+
+# Se convierten los datos a lista
+x = df["Height"].tolist()
+y = df["Salary"].tolist()
+
+mp.plot(x, y, 'r.')
