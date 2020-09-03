@@ -9,6 +9,7 @@ También se puede hacer esto
 Para comentar varias lineas
 """
 
+#%%
 # Tipos de variables
 # No es necesario colocar que tipo de variable
 enteros = 5
@@ -17,28 +18,35 @@ cadena = "Este es el Python"
 booleana = True
 complejo = 3 + 4j
 
+#%%
 # Asignación múltiple de variables
 x, y, z = 1, 2, 3
+#%%
 # Asignación de variables iguales
 x = y = z = "Naranja"
 
+#%%
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Entrada de datos
 # se utiliza la función input()
 variable = input("Aquí va un bonito mensaje: ")
 # y el dato se guarda como un string
 
+#%%
 # para poder "forzar" a la variable a tomar algún datos
 # entonces se usa un especie de "cast"
+# (int)variable
 variableEntera = int(input("Ingresa un valor entero: "))
-variableFlotante = int(input("Ingresa un valor flotante: "))
+variableFlotante = float(input("Ingresa un valor flotante: "))
 
+#%%
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Salida de Datos
 # Utilizar la función print()
 print("Esta es una salida de datos")
 
 # Para mostrar variables
+entero = 5
 print(entero)
 
 # Sin embargo si se desea mostrar variables junto con cadenas de texto
@@ -63,10 +71,10 @@ ARTIMÉTICAS
  +		suma
  -		resta
  *		multiplicación
- /		división
+ /		división flotante
  %		módulo
  **		exponente
- //		división floor
+ //		división entera
  
  NIVEL DE BITS
  &		AND
@@ -92,6 +100,7 @@ print(9 // 6)
 # Junto con su módulo o residuo
 print(9 % 6)
 
+#%%
 # Las operaciones a nivel de bits son las operaciones más rápidas
 # que se pueden efectuar en la ALU
 # Permiten realizar operaciones lógicas a nivel de bits
@@ -101,5 +110,5 @@ print(9 % 6)
 print(9 & 12)	# = 8  = 1000
 print(9 | 12)	# = 13 = 1101
 print(9 ^ 12)	# = 5  = 0101
-print(9 >> 2)	# desplazando 2 bits, queda 00000011 = 3
-print(9 << 2)	# desplazando 2 bits, queda 00110000 = 48
+print(9 >> 2)	# desplazando 2 bits, queda 00000010 = 2
+print(9 << 2)	# desplazando 2 bits, queda 00100100 = 36
