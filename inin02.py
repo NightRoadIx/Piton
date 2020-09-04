@@ -77,6 +77,9 @@ print(copiaLista)
 # Revertir el orden de la lista
 copiaLista.reverse()
 
+# Ordenar la lista
+copiaLista.sort()
+
 # Añadir toda una lista al final de otra
 miListaNumeros.extend(copiaLista)
 print(miListaNumeros)
