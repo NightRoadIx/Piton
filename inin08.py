@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb  7 17:21:19 2020
-
-@author: s_bio
-"""
-
 '''
     MANEJO DE EXCEPCIONES
     El manejo de exepciones permite controlar los errores de un programa en tiempo de ejecución .
