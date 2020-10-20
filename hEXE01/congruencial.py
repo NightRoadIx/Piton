@@ -1,13 +1,40 @@
 # Generador de números congruencial
+#%%
+# Función para revisar que se trata de un valor positivo
+def ingresarIntPositivo(numero):
+    return numero >= 0
 
+# Función para permitir el ingreso de solo valores enteros
+# Se incluye un valor por defecto
+def ingresarInt(mensaje = "Ingresa un valor entero: "):
+    # Ingresar a un ciclo infinito
+    while True:
+        # La respuesta se recibe con un input y el mensaje enviado como argumento
+        resp = input(mensaje)
+        # Se ingresa a una sección try-catch
+        try:
+            # En este caso se intenta convertir a un valor entero (int)
+            valor = int(resp)
+            # Revisar si es un valor positivo
+            if ingresarIntPositivo(valor):
+                break
+            print("No es un valor positivo")
+        # Aquí se maneja la excepción
+        except ValueError:
+            # Se muestra un letrero de que se ingrese de nuevo un valor
+            print("El valor no es un número entero")
+            print("Favor de ingresar de nuevo")
+    # Una vez que se salga del ciclo, se regresa el valor
+    return valor
+
+#%%
 # Ingresar los parámetros a, b, m
-# TODO: Como verificar que lo que ingresa el usuario es un entero?
-a = int(input('Ingrese el valor del multiplicador a    : '))
-b = int(input('Ingrese el valor del sesgo b            : '))
-m = int(input('Ingrese el valor del módulo m           : '))
+a = ingresarInt('Ingrese el valor del multiplicador a    : ')
+b = ingresarInt('Ingrese el valor del sesgo b            : ')
+m = ingresarInt('Ingrese el valor del módulo m           : ')
 
 # Ingresar el valor de números a obtener
-N = int(input('Ingrese la cantidad de datos a obtener N: '))
+N = ingresarInt('Ingrese la cantidad de datos a obtener N: ')
 
 # Iniciar el contador a 0
 n = 0
