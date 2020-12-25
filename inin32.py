@@ -18,7 +18,10 @@ import colorsys
   
 # Aquí se coloca el tamaño (anchura) de la imagen a generar
 WIDTH = 1024
-  
+
+# La potencia de la función de Mandelbrot que genera los fractales
+pot = 2
+
 # Esta función regresa una tupla de valores RGB
 def rgb_conv(i):
     # Recordar que los valores de los colores van de 0 a 255 al tratarse
@@ -37,8 +40,8 @@ def mandelbrot(x, y):
         if abs(c) > 2:
             # Se regresa el valor en RGB de i
             return rgb_conv(i)
-        # Esta es la función Mandelbrot
-        c = c * c + c0
+        # Esta es la función Mandelbrot c = c**m + c0
+        c = (c**pot) + c0
     # Terminar regresando una tupla
     return (0, 0, 0) 
   
