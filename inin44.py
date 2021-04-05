@@ -28,6 +28,11 @@ def perso(nombres):
 # Se manda a llamar la función
 print( mensaje(perso("Borola")) )
 
+#%%
+# Otra forma de realizar esto es asignando la función a una variable
+variable = mensaje
+
+print(variable("Borola"))
 
 #%%
 # Ahora bien, un decordor es una funciín que toma una función como parámetro
