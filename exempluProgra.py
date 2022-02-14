@@ -44,6 +44,18 @@ listaOriginal = tuple(listass)
 listass.append(21)
 
 #%%
+# Insertar elementos a una lista
+listass.insert(5, 21)
+
+#%%
+# Quitar elementos de una lista indicando su índice
+listass.pop(1)
+
+#%%
+# Quitar la primera ocurrencia del objeto
+listass.remove(21)
+
+#%%
 # Añadir un elemento al diccionario
 ditzionario['cinco'] = 30
 
@@ -81,4 +93,23 @@ print( 3*("-Hola-\n") )
 
 ws = 3*listass
 
+#%%
+# como el foreach en c#
+for i in range(1, 20, 4):  # MACLAB 1:1:20
+    print( i*'*')
+print('=D')
+ 
+#%%   
+for i in range(1, 1, 20):  # MACLAB 1:1:20
+    print(i)
 
+#%%
+A = (3, 2, 1, 0)
+for i in A:
+    print(i, end = '\n')
+
+#%%
+r = list(range(20))
+
+for i in list(range(20)):
+    print(i)
