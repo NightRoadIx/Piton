@@ -54,13 +54,20 @@ print(x)	# Regresa un booleano si es que aparece
 cadenaLarga = unaCadena + " " + otraCadena
 print(cadenaLarga)
 
-# Como se sabe, no se puedne combinar cadenas de texto y números, sin embargo
+# Como se sabe, no se pueden combinar cadenas de texto y números, sin embargo
 # se puede hacer uso del método format()
 edad = 36
 namen = "Slim Shady"
 txt = "Mi nombre es {} y tengo {} años"
 print(txt.format(namen, edad))
 # Pueden usarse varios y cada uno se colocará en su lugar
+
+# O también formatear la base numérica con la que se muestran los valores
+elDiez = 10
+print("Decimal {:}".format(elDiez))
+print("Binario {:b}".format(elDiez))
+print("Octal {:o}".format(elDiez))
+print("Hexadecimal {:x}".format(elDiez))
 
 # Caracteres de escape (muy similares a C-ANSI)
 '''
@@ -73,6 +80,9 @@ print(txt.format(namen, edad))
 \ooo	valor en base octal
 \xhh	valor en base hexadecimal
 '''
+# Estos caracteres de escape se pueden ignorar con el uso de cadenas raw
+print(r"Esta es una cadena cruda \n")
+
 # Métodos adicionales de cadena de caracteres
 estaCadena = "esta es una cadena de caracteres adicional"
 
