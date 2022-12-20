@@ -38,3 +38,9 @@ print(esteSet)
 # descartando los elementos repetidos
 superSet = esteSet.union(miSetNumeros)
 print(superSet)
+
+# O encontrar la intersección entre ellos
+interSet = esteSet.intersection(miSetNumeros)
+print(interSet)
+
+## https://realpython.com/python-sets/
