@@ -9,14 +9,26 @@ También se puede hacer esto
 Para comentar varias lineas
 """
 
-#%%
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#%% Memoria
 # Tipos de variables
 # No es necesario colocar que tipo de variable
+# Se trata de un lenguaje débilmente tipado
+booleana = True
 enteros = 5
 flotante = 3.1415926539
-cadena = "Este es el Python"
-booleana = True
 complejo = 3 + 4j
+cadena = "Este es el Pitón!"
+
+# Puede usarse una base diferente
+# Decimal
+elDiez = 10
+elDiezBina = 0b1010
+elDiezOcta = 0o12
+elDiezHexa = 0xA
+
+# Si uno desea conocer el tipo de dato que se está manejando
+type(elDiez)
 
 #%%
 # Asignación múltiple de variables
@@ -52,17 +64,20 @@ print(entero)
 # Sin embargo si se desea mostrar variables junto con cadenas de texto
 # existen varias formas:
 
-# 1.-Concatenar cadenas de texto
+# 1. Concatenar cadenas de texto
 # Utilizar el "cast" str() para convertir el valor a texto
 print("Valor entero: " + str(entero))
 
-# 2.-Usar identificadores como en C
+# 2. Usar identificadores como en C
 print("Un valor flotante %.3f" %flotante)
 
-# 3.-Utilizar el método format() para cadenas
+# 3. Utilizar el método format() para cadenas
 # Los números seguidos de :, indican el número de casillas
 # que serán asignadas para cada número (esto es muy útil para tablas)
 print("Un valor entero {:4}, un valor flotante {:4.3}".format(enteros, flotante))
+
+# 4. Cadenas tipo "f"
+print(f"Un valor que no tiene precio: {elDiez}")
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Operaciones
