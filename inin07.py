@@ -112,3 +112,5 @@ print(x)
 	Espacios			.isspace()
 	Numéricos			.isnumeric()	Se consideran también como ² y ¾ por ejemplo
 '''
+
+# https://docs.python.org/es/3/library/string.html
