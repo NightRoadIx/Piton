@@ -24,7 +24,7 @@ for k in miTuplaNumeros:
 
 # Una vez definida la tupla, esta no puede ser modificada
 # por lo que intentar hacer
-estaTupla[1] = "kiwi"
+## estaTupla[1] = "kiwi"
 # Producirá un error
 # Por lo que, lo que regularmente se hace es utilizar listas
 # o realizar conversiones
@@ -42,3 +42,9 @@ if "manzana" in estaTupla:
 # Unir tuplas
 tuplaGrande = estaTupla + miTuplaNumeros
 
+# Esto contabiliza cuantas veces aparece un elemento en la tupla
+print(tuplaGrande.count('kiwi'))
+
+# Desempaquetar tuplas
+elem1, elem2 = (1, "olakease")
+print(elem2)
