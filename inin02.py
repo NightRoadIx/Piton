@@ -1,63 +1,85 @@
 '''
-	Manejo de estructuras de control
+  Colecciones de datos en Python (Listas)
+	
+	Existe cuatro tipos de datos en Python:
+	Listas, Tuplas, Sets y Diccionarios
 '''
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# ESTRUCTURA DE DECISIÓN
-a = 23
-b = 43
+# LISTAS
+# Una lista es una colección de datos ordenada y modificable
+# Se declaran de la siguiente forma:
+miLista = ["manzana", "banana", "cereza"]
+miListaNumeros = [1, 9, 4, 2, 5, 8]
 
-if a > b:
-  print("{:d} es mayor que {:d}".format(a, b))
-elif a < b:
-  print("{:d} es mayor que {:d}".format(b, a))
-else:
-  print("Ambos números son iguales")
-# Se debe considerar la "indentación"
-# esto es colocar espacio o espacios 
-# para sustituir a las llaves del lenguaje C
+# Para acceder a los elementos de la lista
+print(miLista[1])
+# El índice de la lista inicia en 0
 
-# DESAFORTUNADAMENTE NO EXISTE EL SWITCH EN PYTHON (aunque no se le extraña)
+# ... sin embargo también existe los siguiente
+print(miLista[-1])
+# Es posible utilizar un indexado negativo para acceder
+# a los elementos de la lista
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# ESTRUCTURAS DE CICLOS
-# Ciclo while
-i = 1
-while i < 6:
-  print(i)
-  i += 1
+# O también acceder a un rango de datos (generar una sublista)
+print(miListaNumeros[2:5]) # en el intervalo [2, 5)
+# puede dejarse en blanco alguno de los números
+# iniciar desde el el primer elemento (miLista[:n])
+# o de un cierto índice al final (miLista[n:])
 
-# Utilizando la instrucción break
-i = 1
-while i < 6:
-  print(i)
-  if i == 3:
-    break
-  i += 1
+# Cambiar valores
+miLista[1] = "lychee"
 
-# Utilizando la instrucción continue
-i = 0
-while i < 6:
-  i += 1
-  if i == 3:
-    continue
-  print(i)
-
-# Puede generarse un bloque infinito
-while True:
-  entrada = input("Salir con s> ")
-  if entrada == 's':
-    # Es posible romper el ciclo con la instrucción break
-    break
-
-
-# Ciclo for
-# Puede usarse la instrucción range()
-# para indicar inicio, fin y pasos que dará el for
-for k in range(0, 10, 1):
-  # en lenguaje C sería algo como for(k = 0; k < 10; k++)
+# Recorrer una lista
+for k in miListaNumeros:
   print(k)
 
-# Puede usarse para recorrer letra a letra una cadena de texto por ejemplo
-for k in "anaconda":
-  print(k)
+# Determinar la longitud de una lista
+print("Longitud de la lista " + str(len(miListaNumeros)))
+
+# Añadir elementos a la lista
+miLista.append("naranja")
+print(miLista)
+
+# Añadir en algún lugar en particular, recorriendo
+# los elementos para dar espacio
+miLista.insert(1, "banana")
+
+# Eliminar un elemento en particular
+miLista.remove("banana")
+
+# O también mediante la función pop() y el índice del elemento
+miLista.pop(1)
+
+# El método clear(), limpia la lista de elementos
+miLista.clear()
+
+# La función del elimina las variables
+# del miLista
+
+# Copiar una lista
+# no es posible hacer lista2 = lista1, puesto que lista2
+# será solo una referencia de lista1 y los cambios hechos en
+# lista 1 se verán reflejados en lista2
+copiaLista = miListaNumeros
+
+miListaNumeros.append(666)
+print(miListaNumeros)
+print(copiaLista)
+
+# Para hacer una copia completamente separada de la lista original
+# se debe usar el método copy()
+copiaLista = miListaNumeros.copy()
+
+miListaNumeros.append(999)
+print(miListaNumeros)
+print(copiaLista)
+
+# Revertir el orden de la lista
+copiaLista.reverse()
+
+# Ordenar la lista
+copiaLista.sort()
+
+# Añadir toda una lista al final de otra
+miListaNumeros.extend(copiaLista)
+print(miListaNumeros)
