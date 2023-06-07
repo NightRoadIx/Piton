@@ -46,7 +46,7 @@ img.show()
 print("Formato: ", img.format)
 print("Tamaño: ", img.size)
 print("Modo: ", img.mode)
-print("Valor del pixel (0,0,0): ", img[0,0,0])
+print("Pixel (0, 0): ", img.load()[0,0])
 
 # Redimensionar la imagen
 redimg = img.resize(
