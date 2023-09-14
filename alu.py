@@ -62,10 +62,10 @@ print(69 ^ 0)
 
 # Revisar si un número es par o impar
 num = int(input("Ingresa un número: "))
-if(num & 1):
-    print("Número impar")
-else:
-    print("Número par")
+# Operador ternario
+# variable = RespuestaVerdadera if condicion else RespuestaFalsa
+res = "impar" if (num & 1) else "par"
+print("Número es " + res)
 
 # Operador de desplazamiento de bits
 # A la derecha
