@@ -60,6 +60,13 @@ print(69 | 0)
 print(f'{bin(69)} ^ {bin(255)} = {bin(69 & 255)}')
 print(69 ^ 0)
 
+# Revisar si un número es par o impar
+num = int(input("Ingresa un número: "))
+if(num & 1):
+    print("Número impar")
+else:
+    print("Número par")
+
 # Operador de desplazamiento de bits
 # A la derecha
 print(138 >> 1)
