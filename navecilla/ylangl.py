@@ -46,8 +46,10 @@ class Player(pygame.sprite.Sprite):
         """
         if pressed_keys[K_UP]:
             self.rect.move_ip(0, -5)
+            move_up_sound.play()
         if pressed_keys[K_DOWN]:
             self.rect.move_ip(0, 5)
+            move_down_sound.play()
         if pressed_keys[K_LEFT]:
             self.rect.move_ip(-5, 0)
         if pressed_keys[K_RIGHT]:
@@ -84,8 +86,6 @@ class Enemy(pygame.sprite.Sprite):
         )
         self.speed = random.randint(5, 20)
 
-    # Move the sprite based on speed
-    # Remove it when it passes the left edge of the screen
     def update(self):
         """
         Mover el sprite basado en la velocidad
@@ -124,6 +124,9 @@ class Cloud(pygame.sprite.Sprite):
 # Configurar el reloj para una tasa de actualización decente
 clock = pygame.time.Clock()
 
+# Configurar para el sonido
+pygame.mixer.init()
+
 # Iniciar pygame
 pygame.init()
 
@@ -131,9 +134,19 @@ pygame.init()
 # SCREEN_WIDTH y SCREEN_HEIGHT
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+# Cargar y comenzar a reproducir la música de fondo
+pygame.mixer.music.load("Apoxode_-_Electric_1.mp3")
+# Reproducir sin fin
+pygame.mixer.music.play(loops=-1)
+
+# Cargar todos los archivos de sonido
+move_up_sound = pygame.mixer.Sound("Rising_putter.ogg")
+move_down_sound = pygame.mixer.Sound("Falling_putter.ogg")
+collision_sound = pygame.mixer.Sound("Collision.ogg")
+
 # Crear un evento personalizado para añadir un nuevo enemigo
 ADDENEMY = pygame.USEREVENT + 1
-# Esto se hará cada 1000 ms
+# Esto se hará cada 250 ms
 pygame.time.set_timer(ADDENEMY, 250)
 ADDCLOUD = pygame.USEREVENT + 2
 pygame.time.set_timer(ADDCLOUD, 1000)
@@ -201,6 +214,14 @@ while running:
     if pygame.sprite.spritecollideany(player, enemies):
         # Si es el caso, remover al jugador y detener el ciclo
         player.kill()
+
+        # Detener cualquier sonido y ejecutar el de colisión
+        move_up_sound.stop()
+        move_down_sound.stop()
+        collision_sound.play()
+
+        pygame.time.wait(500)
+
         running = False
 
     # Voltea la pantalla para desplegar
@@ -208,3 +229,7 @@ while running:
 
     # Asegurar que el programa mantenga 30 fps
     clock.tick(30)
+
+# Detener el mixer para el sonido
+pygame.mixer.music.stop()
+pygame.mixer.quit()
