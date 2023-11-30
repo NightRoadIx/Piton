@@ -1,8 +1,7 @@
 '''
     KEYLOGGER
-    Un keylogger es un software que regitsra las pulsaciones del teclado
-    en donde el sofwate está siendo ejecutado, para posteriormente
-    guardarlas en un archivo.
+    Un keylogger es un programa que registra las pulsaciones del teclado
+    para posteriormente almacenarlas en un archivo.
     Los keyloggers son bastante utilizados como malware para acceder
     a información sin que la "víctima" se de cuenta
 '''
