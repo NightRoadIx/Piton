@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- Código en HTML que será manejado en español -->
+<html lang="es">
+<!-- Cabecera del archivo HTML -->
+<head>
+    <!-- Soporte para caracteres UTF8 y manejo de ñ, acentos, etc. -->
+    <meta charset="UTF-8">
+    <!-- Escala inicial y ajustar al dispositivo donde se vea la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Título de la página -->
+    <title>Formulario en Flask</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!--
+        Capa de estilos en hoja de estilos en cascada
+        para el modo oscuro y estilos adicionales
+    -->
+    <style>
+        :root {
+            --primary-color: #343a40;
+            --secondary-color: #f8f9fa;
+            --form-background: #e9f2fa;
+            --form-border: #b2d4ef;
+            --label-color: #0056b3;
+            --input-background: #ffffff;
+            --input-border: #80bdff;
+            --button-background: #007bff;
+            --button-border: #0056b3;
+            --dark-form-background: #495057;
+            --dark-label-color: #f8f9fa;
+            --dark-input-background: #6c757d;
+            --dark-input-border: #adb5bd;
+            --dark-button-background: #007bff;
+            --dark-button-border: #0056b3;
+        }
+
+        body.dark-mode {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        body.dark-mode .form-container {
+            background-color: var(--dark-form-background);
+            border-color: var(--dark-input-border);
+        }
+
+        body.dark-mode .form-label {
+            color: var(--dark-label-color);
+        }
+
+        body.dark-mode .form-control {
+            background-color: var(--dark-input-background);
+            border-color: var(--dark-input-border);
+            color: var(--dark-label-color);
+        }
+
+        body.dark-mode .btn-primary {
+            background-color: var(--dark-button-background);
+            border-color: var(--dark-button-border);
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            background-color: var(--form-background);
+            border: 1px solid var(--form-border);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .form-label {
+            color: var(--label-color);
+        }
+
+        .form-control {
+            background-color: var(--input-background);
+            border: 1px solid var(--input-border);
+        }
+
+        .btn-primary {
+            background-color: var(--button-background);
+            border: 1px solid var(--button-border);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--button-border);
+        }
+
+        .form-check.form-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .form-check.form-switch input {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<!-- Capa del cuerpo de la página -->
+<body>
+    <div class="form-container">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="themeSwitch">
+            <label class="form-check-label" for="themeSwitch">Modo Oscuro</label>
+        </div>
+        <h1 class="mb-4 text-center">Ingrese sus datos</h1>
+        <form action="/submit" method="POST">
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario:</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Aceptar</button>
+        </form>
+    </div>
+
+    <!-- JS de Bootstrap y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- Script para cambiar a modo oscuro -->
+    <script>
+        document.getElementById('themeSwitch').addEventListener('change', function (event) {
+            if (event.target.checked) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>
